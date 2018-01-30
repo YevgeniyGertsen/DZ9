@@ -14,7 +14,7 @@ namespace DZ9
         private static AreaDB DB = new AreaDB();
         static void Main(string[] args)
         {
-            Task11();
+            Task12();
         }
 
         public static void Task1()
@@ -203,6 +203,25 @@ namespace DZ9
             {
                 Console.WriteLine(string.Format("UserId = {0}; DateFinish = {1}; AreaId = {2}; Name = {3}; IP = {4};", area.UserId, area.DateFinish, area.AreaId, area.Name, area.IP));
             }
+
+        }
+        public static void Task12()
+        {
+            XElement element = XElement.Load("Task3/Task3.xml");
+            int NotFulfilledCount = DB.Timer
+                .Join(element.Elements("Area"), t => (int)t.AreaId, a => Convert.ToInt32(a.Element("AreaId").Value), (t, a) => new
+                {
+                    t.DateFinish,
+                })
+                .Where(w=>w.DateFinish == null)
+                .Count();
+            Console.WriteLine(NotFulfilledCount);
+
+            var query = element.Elements("Area").Select(s => new
+            {
+                s.Element("Name").Value,
+                Count = DB.Timer.Where(w => w.AreaId.ToString() == s.Element("AreaId").Value).Count()
+            });
 
         }
     }
