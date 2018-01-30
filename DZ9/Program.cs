@@ -208,20 +208,15 @@ namespace DZ9
         public static void Task12()
         {
             XElement element = XElement.Load("Task3/Task3.xml");
-            int NotFulfilledCount = DB.Timer
-                .Join(element.Elements("Area"), t => (int)t.AreaId, a => Convert.ToInt32(a.Element("AreaId").Value), (t, a) => new
+            var query = DB.Timer
+                .Join(element.Elements("Area"), t => t.AreaId.ToString(), a => a.Element("AreaId").Value, (t, a) => new
                 {
-                    t.DateFinish,
-                })
-                .Where(w=>w.DateFinish == null)
-                .Count();
-            Console.WriteLine(NotFulfilledCount);
-
-            var query = element.Elements("Area").Select(s => new
-            {
-                s.Element("Name").Value,
-                Count = DB.Timer.Where(w => w.AreaId.ToString() == s.Element("AreaId").Value).Count()
-            });
+                    AreaId = a.Element("AreaId").Value,
+                    Name = a.Element("Name").Value,
+                    Count = DB.Timer.Where(w => w.AreaId.ToString() == a.Element("AreaId").Value).Count(),
+                    Sum = DB.Timer.Where(w => w.AreaId.ToString() == a.Element("AreaId").Value).Select(s => s.DurationInSeconds).Sum(),
+                    Not = DB.Timer.Where(w => w.AreaId.ToString() == a.Element("AreaId").Value && w.DateFinish == null).Count()
+                }).OrderByDescending(o => o.AreaId);
 
         }
     }
