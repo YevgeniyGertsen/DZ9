@@ -213,9 +213,16 @@ namespace DZ9
                 {
                     AreaId = a.Element("AreaId").Value,
                     Name = a.Element("Name").Value,
-                    Count = DB.Timer.Where(w => w.AreaId.ToString() == a.Element("AreaId").Value).Count(),
-                    Sum = DB.Timer.Where(w => w.AreaId.ToString() == a.Element("AreaId").Value).Select(s => s.DurationInSeconds).Sum(),
-                    Not = DB.Timer.Where(w => w.AreaId.ToString() == a.Element("AreaId").Value && w.DateFinish == null).Count()
+                    Count = DB.Timer
+                            .Where(w => w.AreaId.ToString() == a.Element("AreaId").Value)
+                            .Count(),
+                    Sum = DB.Timer
+                            .Where(w => w.AreaId.ToString() == a.Element("AreaId").Value)
+                            .Select(s => s.DurationInSeconds)
+                            .Sum(),
+                    Not = DB.Timer
+                            .Where(w => w.AreaId.ToString() == a.Element("AreaId").Value && w.DateFinish == null)
+                            .Count()
                 })
                 .OrderByDescending(o => o.AreaId);
             foreach (var item in query)
