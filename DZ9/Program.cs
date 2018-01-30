@@ -229,6 +229,7 @@ namespace DZ9
             {
                 Console.WriteLine(string.Format("AreaId = {0}; Name = {1}; Count = {2}; Sum = {3}; Not = {4}"), item.AreaId, item.Name, item.Count, item.Sum, item.Not);
             }
+             
         }
     }
 }
