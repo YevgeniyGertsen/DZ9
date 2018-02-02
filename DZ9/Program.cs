@@ -14,7 +14,7 @@ namespace DZ9
         private static AreaDB DB = new AreaDB();
         static void Main(string[] args)
         {
-            Task12();
+            Task11();
         }
 
         public static void Task1()
@@ -67,12 +67,14 @@ namespace DZ9
         public static void Task4()
         {
             DirectoryInfo info = Directory.CreateDirectory("Task4");
-            var query = DB.Area.Where(w => w.IP != null).Join(DB.Timer, a => a.AreaId, t => t.AreaId, (a, t) => new
-            {
-                t.UserId,
-                a.Name,
-                t.DateStart
-            });
+            var query = DB.Area
+                .Where(w => w.IP != null)
+                .Join(DB.Timer, a => a.AreaId, t => t.AreaId, (a, t) => new
+                {
+                    t.UserId,
+                    a.Name,
+                    t.DateStart
+                });
             XElement xDoc = new XElement("root");
             foreach (var area in query)
             {
@@ -87,7 +89,8 @@ namespace DZ9
         public static void Task5()
         {
             DirectoryInfo info = Directory.CreateDirectory("Task5");
-            var query = DB.Timer.Where(w => w.DateFinish == null);
+            var query = DB.Timer
+                .Where(w => w.DateFinish == null);
 
             XElement xDoc = new XElement("root");
             foreach (Timer timer in query)
@@ -105,7 +108,8 @@ namespace DZ9
         public static void Task6()
         {
             DirectoryInfo info = Directory.CreateDirectory("Task6");
-            var query = DB.Timer.Where(w => w.DateFinish != null && w.DateStart != null);
+            var query = DB.Timer
+                .Where(w => w.DateFinish != null && w.DateStart != null);
 
             XElement xDoc = new XElement("root");
             foreach (Timer timer in query)
@@ -144,12 +148,13 @@ namespace DZ9
         {
             XElement element = XElement.Load("Task6/Task6.xml");
             //Здесь вообще даже не обязательно выборку то делать, можно и без нее сразу бежать по документу и выводить нужное значение, но я так делать не захотел
-            var query = element.Elements("Timer").Select(s => new
-            {
-                UserId = s.Element("UserId").Value,
-                AreaId = s.Element("AreaId").Value,
-                DocumentId = s.Element("DocumentId").Value
-            });
+            var query = element.Elements("Timer")
+                .Select(s => new
+                {
+                    UserId = s.Element("UserId").Value,
+                    AreaId = s.Element("AreaId").Value,
+                    DocumentId = s.Element("DocumentId").Value
+                });
             foreach (var timer in query)
             {
                 Console.WriteLine(string.Format("\tUserId = {0}; AreaId = {1}; DocumentId = {2};",timer.UserId,timer.AreaId,timer.DocumentId));
@@ -186,50 +191,82 @@ namespace DZ9
         {
             XElement element = XElement.Load("Task7/Task7.xml");
 
-            var query = DB.Timer.Where(w => w.UserId != 0 && w.DateFinish == null)
-                .Join(element.Elements("Area"), t => t.AreaId, a => int.Parse(a.Element("AreaId").Value), (t, a) => new
-                {
-                    AreaId = a.Element("AreaId").Value,
-                    Name = a.Element("Name").Value,
-                    IP = a.Element("IP").Value,
-                    t.UserId,
-                    t.DateFinish
-                });
+            //var xmlQuery = element.Elements("Area")
+            //    .Select(s => new
+            //    {
+            //        AreaId = int.Parse(s.Element("AreaId").Value),
+            //        Name = s.Element("Name").Value,
+            //        IP = s.Element("Name").Value
+            //    }).ToList();
+
+            //var query = from t in DB.Timer
+            //            where t.DateFinish == null && t.UserId != 0
+            //            join a in xmlQuery on t.AreaId equals a.AreaId
+            //            select new
+            //            {
+            //                a.AreaId,
+            //                a.Name,
+            //                a.IP,
+            //                t.DateFinish,
+            //                t.UserId
+            //            };
+
+            //var query = from t in DB.Timer
+            //            from a in element.Elements("Area")
+            //            let ID = int.Parse(a.Element("AreaId").Value)
+            //            where t.AreaId == ID && t.DateFinish == null && t.UserId != 0
+            //            select new
+            //            {
+            //                AreaId = a.Element("AreaId").Value,
+            //                Name = a.Element("Name").Value,
+            //                IP = a.Element("IP").Value,
+            //                t.DateFinish,
+            //                t.UserId
+            //            };
+
+            //var query = DB.Timer.Where(w => w.UserId != 0 && w.DateFinish == null)
+            //    .Join(element.Elements("Area"), t => t.AreaId, a => int.Parse(a.Element("AreaId").Value), (t, a) => new
+            //    {
+            //        AreaId = a.Element("AreaId").Value,
+            //        Name = a.Element("Name").Value,
+            //        IP = a.Element("IP").Value,
+            //        t.UserId,
+            //        t.DateFinish
+            //    });
             //IEnumerable<XElement> list = element.Elements("Area")
             //    .Where(w => w.Element("AreaId").Value == DB.Timer
             //        .Where(w2 => w2.DateFinish == null && w2.UserId == 0)
             //        .Select(s => s.AreaId).ToString());
-            foreach (var area in query)
-            {
-                Console.WriteLine(string.Format("UserId = {0}; DateFinish = {1}; AreaId = {2}; Name = {3}; IP = {4};", area.UserId, area.DateFinish, area.AreaId, area.Name, area.IP));
-            }
+            //foreach (var area in query)
+            //{
+            //    Console.WriteLine(string.Format("UserId = {0}; DateFinish = {1}; AreaId = {2}; Name = {3}; IP = {4};", area.UserId, area.DateFinish, area.AreaId, area.Name, area.IP));
+            //}
 
         }
         public static void Task12()
         {
-            XElement element = XElement.Load("Task3/Task3.xml");
-            var query = DB.Timer
-                .Join(element.Elements("Area"), t => t.AreaId.ToString(), a => a.Element("AreaId").Value, (t, a) => new
-                {
-                    AreaId = a.Element("AreaId").Value,
-                    Name = a.Element("Name").Value,
-                    Count = DB.Timer
-                            .Where(w => w.AreaId.ToString() == a.Element("AreaId").Value)
-                            .Count(),
-                    Sum = DB.Timer
-                            .Where(w => w.AreaId.ToString() == a.Element("AreaId").Value)
-                            .Select(s => s.DurationInSeconds)
-                            .Sum(),
-                    Not = DB.Timer
-                            .Where(w => w.AreaId.ToString() == a.Element("AreaId").Value && w.DateFinish == null)
-                            .Count()
-                })
-                .OrderByDescending(o => o.AreaId);
-            foreach (var item in query)
-            {
-                Console.WriteLine(string.Format("AreaId = {0}; Name = {1}; Count = {2}; Sum = {3}; Not = {4}"), item.AreaId, item.Name, item.Count, item.Sum, item.Not);
-            }
-             
+            //XElement element = XElement.Load("Task3/Task3.xml");
+            //var query = DB.Timer
+            //    .Join(element.Elements("Area"), t => t.AreaId.ToString(), a => a.Element("AreaId").Value, (t, a) => new
+            //    {
+            //        AreaId = a.Element("AreaId").Value,
+            //        Name = a.Element("Name").Value,
+            //        Count = DB.Timer
+            //                .Where(w => w.AreaId.ToString() == a.Element("AreaId").Value)
+            //                .Count(),
+            //        Sum = DB.Timer
+            //                .Where(w => w.AreaId.ToString() == a.Element("AreaId").Value)
+            //                .Select(s => s.DurationInSeconds)
+            //                .Sum(),
+            //        Not = DB.Timer
+            //                .Where(w => w.AreaId.ToString() == a.Element("AreaId").Value && w.DateFinish == null)
+            //                .Count()
+            //    })
+            //    .OrderByDescending(o => o.AreaId);
+            //foreach (var item in query)
+            //{
+            //    Console.WriteLine(string.Format("AreaId = {0}; Name = {1}; Count = {2}; Sum = {3}; Not = {4}"), item.AreaId, item.Name, item.Count, item.Sum, item.Not);
+            //}       
         }
     }
 }
