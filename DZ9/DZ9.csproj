@@ -226,7 +226,9 @@
     <Content Include="bin\Debug\Task4\Task4.xml" />
     <Content Include="bin\Debug\Task5\Task5.xml" />
     <Content Include="bin\Debug\Task6\Task6.xml" />
-    <Content Include="bin\Debug\Task7\Task7.xml" />
+    <Content Include="bin\Debug\Task7\Task7.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="bin\Debug\Task9\TimeChangeToday_30.01.2018.xml" />
   </ItemGroup>
   <ItemGroup>
