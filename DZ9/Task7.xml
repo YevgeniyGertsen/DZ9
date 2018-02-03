@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:Area="http://logbook.itstep.org/">
+  <Area>
+    <AreaId>2</AreaId>
+    <Name>Engine Disassembly</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>3</AreaId>
+    <Name>№1 Engine disassembly</Name>
+    <IP>10.53.34.61</IP>
+  </Area>
+  <Area>
+    <AreaId>4</AreaId>
+    <Name>№2 Engine Disassembly</Name>
+    <IP>10.53.34.60</IP>
+  </Area>
+  <Area>
+    <AreaId>7</AreaId>
+    <Name>Camshaft inspection</Name>
+    <IP>10.53.34.63</IP>
+  </Area>
+  <Area>
+    <AreaId>9</AreaId>
+    <Name>Engine electrics</Name>
+    <IP>10.53.34.78</IP>
+  </Area>
+  <Area>
+    <AreaId>10</AreaId>
+    <Name>Housings Disassembly</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>11</AreaId>
+    <Name>Housings disassembly </Name>
+    <IP>10.53.34.71</IP>
+  </Area>
+  <Area>
+    <AreaId>12</AreaId>
+    <Name>Housing, Fan Drive, Pumps Assembly</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>14</AreaId>
+    <Name>Crankshaft inspection</Name>
+    <IP>10.53.34.63</IP>
+  </Area>
+  <Area>
+    <AreaId>15</AreaId>
+    <Name>Short block inspection</Name>
+    <IP>10.53.34.64</IP>
+  </Area>
+  <Area>
+    <AreaId>16</AreaId>
+    <Name>Applied failure analysis</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>17</AreaId>
+    <Name>Cylinder heads/exhaust manifolds/turbochargers disassembly</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>18</AreaId>
+    <Name>Cylinder heads disassembly</Name>
+    <IP>10.53.34.74</IP>
+  </Area>
+  <Area>
+    <AreaId>19</AreaId>
+    <Name>Cylinder heads/exhaust manifolds/turbochargers assembly</Name>
+    <IP>10.53.34.70</IP>
+  </Area>
+  <Area>
+    <AreaId>20</AreaId>
+    <Name>Oil and Water Pumps</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>21</AreaId>
+    <Name>Pumps disassembly</Name>
+    <IP>10.53.34.71</IP>
+  </Area>
+  <Area>
+    <AreaId>22</AreaId>
+    <Name>Oil and Water Pumps Assembly</Name>
+    <IP>10.53.34.75</IP>
+  </Area>
+  <Area>
+    <AreaId>23</AreaId>
+    <Name>Fuel Pump Test</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>24</AreaId>
+    <Name>Engine pumps disassembly</Name>
+    <IP>10.53.34.72</IP>
+  </Area>
+  <Area>
+    <AreaId>25</AreaId>
+    <Name>Fuel Pump Assembly</Name>
+    <IP> </IP>
+  </Area>
+  <Area>
+    <AreaId>26</AreaId>
+    <Name>Fuel pump assembly/testing</Name>
+    <IP>10.53.34.79</IP>
+  </Area>
+  <Area>
+    <AreaId>27</AreaId>
+    <Name>Short blocks assembly</Name>
+    <IP>10.53.34.75</IP>
+  </Area>
+  <Area>
+    <AreaId>28</AreaId>
+    <Name>Engine assembly</Name>
+    <IP />
+  </Area>
+  <Area>
+    <AreaId>29</AreaId>
+    <Name>№1 Engine assembly</Name>
+    <IP>10.53.34.75</IP>
+  </Area>
+  <Area>
+    <AreaId>30</AreaId>
+    <Name>№2 Engine assembly</Name>
+    <IP>10.53.34.55</IP>
+  </Area>
+  <Area>
+    <AreaId>31</AreaId>
+    <Name>№3 Engine assembly</Name>
+    <IP>10.53.34.56</IP>
+  </Area>
+  <Area>
+    <AreaId>32</AreaId>
+    <Name>Engine testing</Name>
+    <IP>10.53.34.80</IP>
+  </Area>
+  <Area>
+    <AreaId>37</AreaId>
+    <Name>Receive &amp; Dispatch</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>38</AreaId>
+    <Name>Reception</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>39</AreaId>
+    <Name>Preparation for dispatch</Name>
+    <IP>10.53.34.54</IP>
+  </Area>
+  <Area>
+    <AreaId>40</AreaId>
+    <Name>Engine test preparation</Name>
+    <IP>10.53.34.80</IP>
+  </Area>
+  <Area>
+    <AreaId>41</AreaId>
+    <Name>Engine cleaning</Name>
+    <IP>10.53.34.52</IP>
+  </Area>
+  <Area>
+    <AreaId>42</AreaId>
+    <Name>PT cleaning</Name>
+    <IP>10.53.34.66</IP>
+  </Area>
+  <Area>
+    <AreaId>43</AreaId>
+    <Name>Turbocharger Assembly</Name>
+    <IP>10.53.34.51</IP>
+  </Area>
+  <Area>
+    <AreaId>44</AreaId>
+    <Name>PT pumps disassembly</Name>
+    <IP>10.53.34.72</IP>
+  </Area>
+  <Area>
+    <AreaId>45</AreaId>
+    <Name>PT pumps assembly</Name>
+    <IP>10.53.34.85</IP>
+  </Area>
+  <Area>
+    <AreaId>46</AreaId>
+    <Name>Valve group assembly</Name>
+    <IP>10.53.34.85</IP>
+  </Area>
+  <Area>
+    <AreaId>47</AreaId>
+    <Name>PT assembly</Name>
+    <IP />
+  </Area>
+  <Area>
+    <AreaId>48</AreaId>
+    <Name>№1 PT assembly</Name>
+    <IP>10.53.34.73</IP>
+  </Area>
+  <Area>
+    <AreaId>49</AreaId>
+    <Name>№2 PT assembly</Name>
+    <IP>10.53.34.85</IP>
+  </Area>
+  <Area>
+    <AreaId>50</AreaId>
+    <Name>№3 PT assembly</Name>
+    <IP>10.53.34.77</IP>
+  </Area>
+  <Area>
+    <AreaId>51</AreaId>
+    <Name>№4 PT assembly</Name>
+    <IP>10.53.34.53</IP>
+  </Area>
+  <Area>
+    <AreaId>52</AreaId>
+    <Name>№5 PT assembly</Name>
+    <IP>10.53.34.76</IP>
+  </Area>
+  <Area>
+    <AreaId>53</AreaId>
+    <Name>№6 PT assembly</Name>
+    <IP>10.53.34.67</IP>
+  </Area>
+  <Area>
+    <AreaId>54</AreaId>
+    <Name>PT hydraulics testing</Name>
+    <IP>10.53.34.81</IP>
+  </Area>
+  <Area>
+    <AreaId>55</AreaId>
+    <Name>PT disassembly</Name>
+    <IP />
+  </Area>
+  <Area>
+    <AreaId>56</AreaId>
+    <Name>№1 PT disassembly</Name>
+    <IP>10.53.34.65</IP>
+  </Area>
+  <Area>
+    <AreaId>57</AreaId>
+    <Name>№2 PT disassembly</Name>
+    <IP>10.53.34.65</IP>
+  </Area>
+  <Area>
+    <AreaId>58</AreaId>
+    <Name>№3 PT disassembly</Name>
+    <IP>10.53.34.62</IP>
+  </Area>
+  <Area>
+    <AreaId>59</AreaId>
+    <Name>№4 PT disassembly</Name>
+    <IP>10.53.34.62</IP>
+  </Area>
+  <Area>
+    <AreaId>60</AreaId>
+    <Name>Power Train Parts Cleaning</Name>
+    <IP />
+  </Area>
+  <Area>
+    <AreaId>72</AreaId>
+    <Name>Dispatch</Name>
+    <IP>10.53.2.6</IP>
+  </Area>
+  <Area>
+    <AreaId>79</AreaId>
+    <Name>Receiving</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>83</AreaId>
+    <Name>Fan drive disassembly</Name>
+    <IP>10.53.34.71</IP>
+  </Area>
+  <Area>
+    <AreaId>84</AreaId>
+    <Name>Fan drive assembly</Name>
+    <IP>10.53.34.75</IP>
+  </Area>
+  <Area>
+    <AreaId>85</AreaId>
+    <Name>Testing cylinder heads</Name>
+    <IP>10.53.34.74</IP>
+  </Area>
+  <Area>
+    <AreaId>86</AreaId>
+    <Name>Rocker arms inspection</Name>
+    <IP>10.53.34.63</IP>
+  </Area>
+  <Area>
+    <AreaId>88</AreaId>
+    <Name>Cartridge assembly</Name>
+    <IP>10.53.34.51</IP>
+  </Area>
+  <Area>
+    <AreaId>90</AreaId>
+    <Name>PT inspection</Name>
+    <IP>10.53.34.84</IP>
+  </Area>
+  <Area>
+    <AreaId>93</AreaId>
+    <Name>Housings Assembly</Name>
+    <IP>10.53.34.75</IP>
+  </Area>
+  <Area>
+    <AreaId>94</AreaId>
+    <Name>Turbochargers disassembly</Name>
+    <IP>10.53.34.74</IP>
+  </Area>
+  <Area>
+    <AreaId>95</AreaId>
+    <Name>Pumps/valve group disassembly</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>96</AreaId>
+    <Name>Fuel Pump Assembly and Test</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>97</AreaId>
+    <Name>Washing and Cleaning</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>98</AreaId>
+    <Name>Crankshaft &amp; camshaft inspection</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>99</AreaId>
+    <Name>Turbocharger Assembly</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>100</AreaId>
+    <Name>Electric System Install</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>101</AreaId>
+    <Name>Engine testing</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>102</AreaId>
+    <Name>Reception and Dispatch</Name>
+    <IP></IP>
+  </Area>
+  <Area>
+    <AreaId>104</AreaId>
+    <Name>Bolts &amp; tubes cleaning</Name>
+    <IP>10.53.34.71</IP>
+  </Area>
+  <Area>
+    <AreaId>106</AreaId>
+    <Name>Exhaust manifold disassembly</Name>
+    <IP>10.53.34.74</IP>
+  </Area>
+  <Area>
+    <AreaId>107</AreaId>
+    <Name>Valve group disassembly</Name>
+    <IP>10.53.34.72</IP>
+  </Area>
+  <Area>
+    <AreaId>108</AreaId>
+    <Name>№4 Engine assembly</Name>
+    <IP>10.53.34.57</IP>
+  </Area>
+  <Area>
+    <AreaId>110</AreaId>
+    <Name>№5 Engine assembly</Name>
+    <IP>10.53.34.58</IP>
+  </Area>
+  <Area>
+    <AreaId>111</AreaId>
+    <Name>Short block assembly</Name>
+    <IP>10.53.34.55</IP>
+  </Area>
+  <Area>
+    <AreaId>113</AreaId>
+    <Name>Short block assembly</Name>
+    <IP>10.53.34.56</IP>
+  </Area>
+  <Area>
+    <AreaId>114</AreaId>
+    <Name>Short block assembly</Name>
+    <IP>10.53.34.57</IP>
+  </Area>
+  <Area>
+    <AreaId>115</AreaId>
+    <Name>Short block assembly</Name>
+    <IP>10.53.34.58</IP>
+  </Area>
+  <Area>
+    <AreaId>117</AreaId>
+    <Name>№7 PT assembly</Name>
+    <IP>10.53.34.59</IP>
+  </Area>
+  <Area>
+    <AreaId>118</AreaId>
+    <Name>PT test preparation</Name>
+    <IP>10.53.34.81</IP>
+  </Area>
+  <Area>
+    <AreaId>1103</AreaId>
+    <Name>Separate &amp; Connect</Name>
+    <IP>10.53.34.54</IP>
+  </Area>
+</root>
